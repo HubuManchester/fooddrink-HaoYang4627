@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFoodTracker.DetailPage"
+             Title="Details">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="12">
+            <!-- Image Card -->
+            <Frame CornerRadius="16"
+                   BackgroundColor="White"
+                   Padding="0"
+                   HasShadow="True">
+                <Image x:Name="FoodImage"
+                       Source="placeholder.png"
+                       Aspect="AspectFill"
+                       HeightRequest="200"
+                       HorizontalOptions="Fill"/>
+            </Frame>
+
+            <Label x:Name="NameLabel" FontSize="24" FontAttributes="Bold"/>
+            <Label x:Name="CategoryLabel" FontSize="16" TextColor="Gray"/>
+            <Label x:Name="CaloriesLabel" FontSize="18"/>
+            <Label x:Name="MacroLabel" FontSize="14"/>
+            <Label x:Name="DescLabel" FontSize="14"/>
+            <Label x:Name="AllergyLabel" FontSize="14" TextColor="Orange"/>
+            <Button Text="Read Summary" Clicked="OnSpeak"/>
+            <Button Text="Stop Reading" Clicked="OnStop"/>
+            <Button Text="Vibrate" Clicked="OnVibrate"/>
+            <Button Text="Delete" BackgroundColor="Red" TextColor="White" Clicked="OnDelete"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

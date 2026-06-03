@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFoodTracker.HardwarePage"
+             Title="Hardware">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <Button Text="Take Photo" Clicked="OnTakePhoto"
+                    AutomationProperties.Name="Take a photo using camera" />
+            <Image x:Name="PhotoPreview" HeightRequest="200" />
+            <Button Text="Get Location" Clicked="OnGetLocation"
+                    AutomationProperties.Name="Get current geographic location" />
+            <Label x:Name="LocationLabel" AutomationProperties.HelpText="Display location address" />
+            <Button Text="Read Help" Clicked="OnReadHelp"
+                    AutomationProperties.Name="Read help text aloud" />
+            <Button Text="Stop Speech" Clicked="OnStopSpeech"
+                    AutomationProperties.Name="Stop text to speech" />
+            <Button Text="Vibrate &amp; Haptic" Clicked="OnVibrate"
+                    AutomationProperties.Name="Trigger vibration and haptic feedback" />
+            <Label x:Name="StatusLabel" AutomationProperties.HelpText="Operation status" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
